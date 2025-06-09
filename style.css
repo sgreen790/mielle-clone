@@ -1,0 +1,281 @@
+.pink_banner{
+    background-color: #e41670;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+.white_banner{
+    background-color: white;
+    overflow: hidden;
+    color:#e41670;
+    text-align: center;
+}
+.white_banner2{
+    background-color: white;
+    overflow: hidden;
+    color:#e41670;
+    text-align: center;
+    margin-top: 450px;
+}
+.body{
+    background-color: #FFFBFE;
+}
+
+/*slideshow*/
+.slideshow{
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+.MySlides img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1s;
+}
+@keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*navigation Bar*/
+.dropdown-container {
+    position: relative;
+    height: 50px;
+    align-items:center;
+    display: flex;
+}
+.dropdown-container:hover{
+text-decoration: underline;
+}
+
+.subNav {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.dropdown-container:hover .dropdown {
+    display: flex;
+}
+
+.dropdown .col a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-align:center;
+    margin-bottom: 8px;
+}
+
+.col a b {
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+}
+.navigation a{
+    color: black;
+    text-decoration: none;
+    align-items:center;
+    display: flex;
+}
+.navigation{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 60px;
+}
+/*Shop By Hair Texture homepage*/
+.hide{
+    display: none;
+    margin-top:10px;
+}
+.col2:hover .hide{
+    display:block;
+}
+.col2:hover{
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    text-decoration:underline;
+}
+.col2{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 336px;
+    padding: 20px;
+    text-align:center;
+    position: relative;
+    height: 400px;
+    /*aligns text in center H & V*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+.typebtn{
+    background-color:#e41670;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 90px;
+    align-items: center;
+}
+
+.coily-bg{
+    background-image: url("Coily_Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.curly-bg{
+    background-image: url("Curly_Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.wavy-bg{
+    background-image: url("Wavy-Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.straight-bg{
+    background-image: url("Straight-Model.webp");
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*return home*/
+.return{
+    display: block;
+    margin-left: 500px;
+    margin-right: auto;
+}
+
+/*shop by collection homepage*/
+.collection{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 300px;
+    position: relative;
+    color: white;
+    float: left; /*align items side by side*/
+    margin-right: 20px;
+    margin-bottom:20px;
+    margin-left: 50px;
+}
+.collection:hover{
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+.collection a{
+    text-decoration:none;
+    color: white;
+}
+.rm{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 15%, transparent 30%),
+    url("collection-rm.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;            
+    text-align: center;
+}
+.ph{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 15%, transparent 30%),
+    url("collection-ph.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;             
+    text-align: center;
+}
+.kmav{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 15%, transparent 30%),
+    url("collection-kmav.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;           
+    text-align: center;
+}
+.at{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 15%, transparent 30%),
+    url("collection-at.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;             
+    text-align: center;
+}
+.mt{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 20%),
+    url("collection-mt.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;              
+    text-align: center;
+}
+.rw{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 20%),
+    url("collection-rw.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;              
+    text-align: center;
+}
+.es{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 20%),
+    url("collection-es.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;             
+    text-align: center;
+}
+.sm{
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent 20%),
+    url("collection-sm.webp");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;            
+    text-align: center;
+}
