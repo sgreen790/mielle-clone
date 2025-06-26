@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Mielle Dupe</title>
-    <link rel = "Stylesheet" href="./style.css"/>
+        <title>Mielle Dupe</title>
+        <link rel = "Stylesheet" href="./style.css"/>
     </head>
-
-    <body class="Shampoos">
-      <div class = "pink_banner">
+    <body>
+        <div class = "pink_banner">
             <h2>Download our app for <b>20% OFF</b> your 1st order</h2>
         </div>
 
@@ -78,7 +77,10 @@
             <input type="radio" onclick="filterSelection('PH')">Pomegranate & Honey<br>
             <input type="radio" onclick="filterSelection('RM')">Rosemary Mint<br>
             <input type="radio" onclick="filterSelection('AT')">Avocado & Tamanu<br>
-            <input type="radio" onclick="filterSelection('SM')">Sea Moss<br>
+            <p>Product Type</p>
+            <input type="radio" onclick="filterSelection('Mousse')">Mousse<br>
+            <input type="radio" onclick="filterSelection('Gel')">Gel<br>
+            <input type="radio" onclick="filterSelection('Creme')">Creme<br>
             <br> <button onclick="clearFilters()">Clear Filters</button>
         </div>
         <script>
@@ -131,64 +133,107 @@
 
             // Show all products on page load
             window.onload = clearFilters; 
-                </script>
-        
+            </script>
+
         <!--Product Listings-->
-        <div class = "filteredDiv PH">
-            <div class="shampoo">
-                <div class="shampoo-ph">
-                    <div class="shampoo-content">
-                        <p>Pomegranate & Honey Detangling Shampoo</p>
-                        <p><b>$12.99</b></p>
-                        <select>
-                            <option value="option1">12 oz</option>
-                            <option value="option2">32 oz</option>
-                        </select>
+        <div class = "filteredDiv PH Mousse">
+            <div class="styler">
+                <div class="stylers-ph">
+                    <div class="styler-content">
+                        <p>Pomegranate & Honey Curl Defining Mousse</p>
+                        <p><b>$10.99</b></p>
                         <button class="cart">ADD TO CART</button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class = "filteredDiv RM">
-            <div class = shampoo>
-                <div class="shampoo-rm">
-                    <div class="shampoo-content">
-                        <p>Rosemary Mint Strengthening Shampoo</p>
-                        <p><b>$12.99</b></p>
-                        <select>
-                        <option value="option3">3.2 oz</option>
-                        <option value="option1">12 oz</option>
-                        <option value="option2">32 oz</option>
-                        </select>
-                        <button class="cart">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>    
-        </div>
-
-        <div class = "filteredDiv AT">
-            <div class = shampoo>
-                <div class="shampoo-at">
-                    <div class="shampoo-content">
-                        <p>Avocado & Tamanu Anti-Frizz Shampoo</p>
+        <div class = "filteredDiv PH Creme">
+            <div class="styler">
+                <div class="stylers-ph">
+                    <div class="styler-content">
+                        <p>Pomegranate & Honey Twisting Souffle</p>
                         <p><b>$12.99</b></p>
                         <button class="cart">ADD TO CART</button>
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>
-    
-        <div class = "filteredDiv SM">
-            <div class =shampoo>
-                <div class="shampoo-sm">
-                    <div class="shampoo-content">
-                        <p>Sea Moss Shampoo</p>
+        <div class = "filteredDiv PH Gel">
+            <div class="styler">
+                <div class="stylers-ph">
+                    <div class="styler-content">
+                        <p>Pomegranate & Honey Max Hold Gel Styler</p>
                         <p><b>$9.99</b></p>
                         <button class="cart">ADD TO CART</button>
                     </div>
                 </div>
-            </div>    
+            </div>
+        </div>
+        <div class = "filteredDiv PH Gel">
+            <div class="styler">
+                <div class="stylers-ph">
+                    <div class="styler-content">
+                        <p>Pomegranate & Honey Coil Sculpting Custard</p>
+                        <p><b>$12.99</b></p>
+                        <button class="cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "filteredDiv PH Creme">
+            <div class="styler">
+                <div class="stylers-ph">
+                    <div class="styler-content">
+                        <p>Pomegranate & Honey Curl Smoothie</p>
+                        <p><b>$12.99</b></p>
+                        <button class="cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "filteredDiv RM Creme">
+            <div class="styler">
+                <div class="stylers-rm">
+                    <div class="styler-content">
+                        <p>Rosemary & Mint Daily Styling Creme</p>
+                        <p><b>$9.99</b></p>
+                        <button class="cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "filteredDiv RM Gel">
+            <div class="styler">
+                <div class="stylers-rm">
+                    <div class="styler-content">
+                        <p>Rosemary & Mint Hair Strengthening Gel</p>
+                        <p><b>$6.99</b></p>
+                        <button class="cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "filteredDiv AT Mousse">
+            <div class="styler">
+                <div class="stylers-rm">
+                    <div class="styler-content">
+                        <p>Avocado & Tamanu Anti Frizz Mousse</p>
+                        <p><b>$12.99</b></p>
+                        <button class="cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "filteredDiv AT Gel">
+            <div class="styler">
+                <div class="stylers-rm">
+                    <div class="styler-content">
+                        <p>Avocado & Tamanu Anti Frizz Curl Perfector</p>
+                        <p><b>$12.99</b></p>
+                        <button class="cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
