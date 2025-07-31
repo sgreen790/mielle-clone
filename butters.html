@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mielle Clone</title>
-        <link rel ="stylesheet" href="./style.css"/>
+        <title>Mielle Dupe</title>
+        <link rel = "Stylesheet" href="./style.css"/>
     </head>
-    <body class = "coily">
-         <div class = "pink_banner">
+    <body>
+        <div class = "pink_banner">
             <h2>Download our app for <b>20% OFF</b> your 1st order</h2>
         </div>
 
@@ -19,7 +19,6 @@
                 <a href = "shampoo.html">Shampoos & Prepoos</a>
                 <a href = "conditioner.html">Conditioners & Masques</a>
                 <a href = "stylers.html">Gels & Stylers</a>
-                <a href = "#">Oils & Serums</a>
                 <a href = "butters.html">Moistuerizers, Cremes, & Butters</a>
             </div>
 
@@ -65,42 +64,46 @@
 
             <!--return home pic-->
             <div class= "return">
-            <a href="Homepage.html">
-            <img src ="images/mielle_dupe_logo.jpg" alt="logo" style="width:200px; height: 60px;">
-            </a>
+                <a href="Homepage.html">
+                    <img src ="images/mielle_dupe_logo.jpg" alt="logo" style="width:200px; height: 60px;">
+                </a>
+                <h1>HAIR MOISTURIZERS</h1>
             </div>
         </div>
-        </div>
-        <h3>FOR COILY HAIR</h3>
 
-        <!--filter products-->
+        <!--Filtering-->
         <div class="filters">
             <h4><b>FILTERS</b></h4>
             <p>Product Type</p>
-            <input type="checkbox" name="All" onclick="filterSelection('All')">All<br>
-            <input type="checkbox" name="Moistuerizers"  onclick="filterSelection('Moistuerizers')">Moistuerizers<br>
-            <input type="checkbox" name="Styler"  onclick="filterSelection('Styler')">Styler<br>
+            <input type="checkbox" name="productType" data-filter="Milk" onclick="filterSelection()"> Milk<br>
+            <input type="checkbox" name="productType" data-filter="Creme" onclick="filterSelection()"> Creme<br>
 
-        <!--Filterable elements-->
-        <div class="filterable-elms">
-            <div class="filterdiv Styler">Pomegranate & Honey Curl Smoothie</div>
-            <div class="filterdiv Styler">Rosemary Mint Daily Styling Creme</div>
-            <div class="filterdiv Styler">Pomegrantate & Honey Air Dry Styling Lotion</div>
-            <div class="filterdiv Moistureizer">Avocado Moistuerizing Hair Milk</div>
+            <p>Product Type</p>
+            <input type="checkbox" name="productLine" data-filter="PH" onclick="filterSelection()">Pomegranate & Honey<br>
+            <input type="checkbox" name="productLine" data-filter="RM" onclick="filterSelection()">Rosemary Mint<br>
+            <input type="checkbox" name="productLine" data-filter="AT" onclick="filterSelection()">Avocado & Tamanu<br>
+
         </div>
-
         <script>
-            filterSelection("all")
-            function filterSelection(c){
-                var x,i;
-                x=document.getElementsByClassName("filterdiv");
-                if(c== "all") c="";
+            function filterSelection() {
+                const selected = Array.from(document.querySelectorAll('input[name="productType"]:checked,input[name="productLine"]:checked'))
+                                    .map(cb => cb.getAttribute("data-filter"));
 
-                //add show class to filtered elms, and remove it from elms that
-                //aren't selected
-                for(i=0;i<x.length;i++){
-                    removeClass(x[i], "show");
-                    if(x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+                const items = document.getElementsByClassName("filteredDiv");
+
+                for (let i = 0; i < items.length; i++) {
+                    removeClass(items[i], "show");
+
+                    for (let j = 0; j < selected.length; j++) {
+                        if (items[i].className.indexOf(selected[j]) > -1) {
+                            addClass(items[i], "show");
+                            break;
+                        }
+                    }
+
+                    if (selected.length === 0) {
+                        addClass(items[i], "show");
+                    }
                 }
             }
             //show filtered elms
@@ -126,7 +129,85 @@
             }
             element.className = arr1.join(" ");
             }
-        </script>
+            //Clear filters
+            function clearFilters() {
+                // Show all products
+                const x = document.getElementsByClassName("filteredDiv");
+                for (let i = 0; i < x.length; i++) {
+                    addClass(x[i], "show");
+                }
+
+                // Clear all radio buttons
+                const checkboxes = document.querySelectorAll('input[name="productLine"],input[name="productType"]');
+                checkboxes.forEach(checkbox => checkbox.checked = false);
+            }
+
+            // Show all products on page load
+            window.onload = clearFilters; 
+            </script>
+
+        <!--Product Listings-->
+                <!--Product Listings-->
+        <div class ="styler-section">
+            <div class = "filteredDiv PH Creme">
+                <div class="shampoo">
+                    <div class="stylers-ph">
+                        <div class="shampoo-content">
+                            <p>Pomegranate & Honey Curl Smoothie</p>
+                            <p><b>$12.99</b></p>
+                            <button class="cart">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "filteredDiv AT Milk">
+                <div class = shampoo>
+                    <div class="stylers-at">
+                        <div class="shampoo-content">
+                            <p>Avocado Moisturizing Hair Milk</p>
+                            <p><b>$12.99</b></p>
+                            <button class="cart">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+            <div class = "filteredDiv RM Creme">
+                <div class = shampoo>
+                    <div class="stylers-rm">
+                        <div class="shampoo-content">
+                            <p>Rosemary Mint Daily Styling Creme</p>
+                            <p><b>$9.99</b></p>
+                            <button class="cart">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+             <div class = "filteredDiv PH Creme">
+                <div class =shampoo>
+                    <div class="stylers-ph">
+                        <div class="shampoo-content">
+                            <p>Pomegranate & Honey Air Dry Styling Lotion</p>
+                            <p><b>$12.99</b></p>
+                            <button class="cart">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+            <div class = "filteredDiv RM Creme">
+                <div class = shampoo>
+                    <div class="stylers-rm">
+                        <div class="shampoo-content">
+                            <p>Rosemary Mint Daily Styling Creme</p>
+                            <p><b>$9.99</b></p>
+                            <button class="cart">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
 
     </body>
 </html>

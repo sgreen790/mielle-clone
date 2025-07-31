@@ -573,3 +573,84 @@ text-decoration: underline;
     color: #e41670;
     text-align: center;
 }
+/*butters*/
+.styler-section{    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;     /* center horizontally */
+    align-items: center;         /* center vertically */
+    min-height: 50vh;            /* adjusts vertical height */
+    gap: 30px;                   /* space between items */
+    padding-top: 60px;           /* space below the logo/title */
+    padding-bottom: 60px;
+}
+.styler{
+    padding-top: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
+}
+.cart {
+    background-color: #e41670;
+    color: white;
+    border: none;
+}
+.cart:hover {
+    background-color: white;
+    color: #e41670;
+    border: 1px solid #e41670;
+}
+
+.stylers-ph{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/Pomegranate_honey_shampoo.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
+}
+.stylers-rm{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/Pomegranate_honey_shampoo.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
+}
+.stylers-at{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 40%),
+    url("images/Pomegranate_honey_shampoo.webp");
+    height: 300px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* aligns item name to the bottom */
+}
+.return {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:350px;
+    margin-top: 70px;
+}
+
+.return h1 {
+    margin-top: 10px;
+    color: #e41670;
+    text-align: center;
+}
